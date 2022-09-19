@@ -8,4 +8,5 @@ class DateResource(Resource):
     def get(self):
         now = datetime.now();
         dts = now.strftime("%d/%m/%Y %H:%M:%S")
+        dts="hello"+dts
         return Response(dts, mimetype="text/plain", direct_passthrough=True)
